@@ -9,13 +9,13 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage palcoPrincipal) {
 		try {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("TelaUm.fxml"));
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			Scene cenario = new Scene(root,400,400);
+			cenario.getStylesheets().add(getClass().getResource("estilo.css").toExternalForm());
+			palcoPrincipal.setScene(cenario);
+			palcoPrincipal.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
